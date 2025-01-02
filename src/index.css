@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  .heading-large {
+    @apply font-primary font-bold text-[32px] leading-[43px];
+  }
+  .heading-medium {
+    @apply font-primary font-bold text-[24px] leading-[31px];
+  }
+  body {
+    @apply font-primary font-bold text-[18px] leading-[23px];
+  }
+}
