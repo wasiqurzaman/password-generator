@@ -10,6 +10,123 @@
     @apply font-primary font-bold text-[24px] leading-[31px];
   }
   body {
-    @apply font-primary font-bold text-[18px] leading-[23px];
+    @apply font-primary font-bold text-[18px] leading-[23px] bg-black-custom;
   }
+}
+
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  cursor: pointer;
+  width: 100%;
+  /* overflow: hidden; */
+}
+
+/***** Track Styles *****/
+/***** Chrome, Safari, Opera, and Edge Chromium *****/
+input[type="range"]::-webkit-slider-runnable-track {
+  background: #a4ffaf;
+  height: 0.5rem;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 28px;
+  height: 28px;
+  background: #434343;
+  box-shadow: -1px 0 0 1px #43e5f7;
+}
+
+/******** Firefox ********/
+input[type="range"]::-moz-range-track {
+  background: #18171f;
+  height: 0.5rem;
+}
+
+input[type="range"]::-moz-range-progress {
+  background-color: #a4ffaf;
+  height: 0.5rem;
+}
+
+/***** Thumb Styles *****/
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  margin-top: -10px; /* Centers thumb on the track */
+  background-color: #e6e5ea;
+  height: 28px;
+  width: 28px;
+  border-radius: 50%;
+  transition: all 0.2s;
+}
+
+input[type="range"]::-webkit-slider-thumb:hover {
+  background-color: black;
+  outline: 2px solid #a4ffaf;
+}
+
+input[type="range"]::-moz-range-thumb {
+  border: none; /*Removes extra border that FF applies*/
+  border-radius: 0; /*Removes default border-radius that FF applies*/
+  background-color: #e6e5ea;
+  height: 28px;
+  width: 28px;
+  border-radius: 50%;
+  transition: all 0.2s;
+}
+
+input[type="range"]::-moz-range-thumb:hover {
+  background-color: black;
+  outline: 2px solid #a4ffaf;
+}
+
+input[type="range"]::-ms-fill-lower {
+  background-color: #18171f;
+}
+input[type="range"]::-ms-fill-upper {
+  background-color: #a4ffaf;
+}
+
+/* Checkbox style */
+
+input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  margin: 0;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border: 3px solid #e6e5ea;
+  cursor: pointer;
+  font: inherit;
+}
+
+input[type="checkbox"]::before {
+  content: "";
+  width: 15px;
+  height: 15px;
+  transform: scale(0);
+  transition: 120ms transform ease-in-out;
+  box-shadow: inset 1em 1em var(--form-control-color);
+  transform-origin: bottom left;
+  clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+  background-color: #18171f;
+}
+
+input[type="checkbox"]:hover {
+  border: 3px solid #a4ffaf;
+}
+
+input[type="checkbox"]:checked {
+  border: 3px solid #a4ffaf;
+  background-color: #a4ffaf;
+}
+
+input[type="checkbox"]:checked::before {
+  transform: scale(1);
+  transform-origin: bottom left;
+  clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
 }
