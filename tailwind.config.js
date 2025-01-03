@@ -22,13 +22,16 @@ export default {
 
         "darker-gray": "#24232c",
         "dark-gray": "#817d92",
-        "lighter-gray": "#e6e5ea",
+        "white-custom": "#e6e5ea",
         "black-custom": "#18171f",
 
         primary: "#a4ffaf",
-        "accent-red": "#f64a4a)",
-        "accent-orange": "#fb7c58",
-        "accent-yellow": "#f8cd65",
+        "red-custom": "#f64a4a",
+        "orange-custom": "#fb7c58",
+        "yellow-custom": "#f8cd65",
+      },
+      screens: {
+        sm: "480px"
       }
     },
   },
